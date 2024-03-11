@@ -1,0 +1,45 @@
+.searchbar {
+  width: 700px !important;
+  height: 40px;
+}
+.dark-input {
+  background-color: #393838be; /* Set the background color to dark */
+  color: white !important; /* Set text color to white */
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove box shadow */
+  transition-duration: 0.4s;
+  font-size: 12px;
+}
+.dark-input:hover {
+  background-color: #393939;
+  transition: 0.5s ease;
+}
+.dark-input:focus {
+  box-shadow: none; /* Remove box shadow on focus */
+  background-color: #525252be;
+  transition: 0.3s ease;
+}
+.dark-input::placeholder {
+  color: #7a7979; /* Set placeholder text color to white */
+}
+
+.addTodoBtn {
+  height: 40px;
+  background-color: #393838be;
+  border: none;
+  font-size: 12px;
+  color: #7a7979;
+}
+.addTodoBtn:hover {
+  background-color: #7b7b7b;
+  color: #afadad;
+  transition: 0.5s ease;
+}
+
+.addTodoBtn:active {
+  background-color: #7b7b7b !important;
+}
+
+.form-control:focus {
+  outline: none;
+}
