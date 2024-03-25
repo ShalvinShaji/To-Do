@@ -10,6 +10,12 @@ function AddTodo({ show, handleClose, handleAddTodo }) {
     setTodoText(e.target.value);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && todoText.trim() !== "") {
+      handleAdd();
+    }
+  };
+
   const handleAdd = () => {
     handleAddTodo(todoText);
     setTodoText("");
@@ -29,6 +35,7 @@ function AddTodo({ show, handleClose, handleAddTodo }) {
           placeholder="Add todo your list..."
           value={todoText}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
         />
       </Modal.Body>
       <Modal.Footer>

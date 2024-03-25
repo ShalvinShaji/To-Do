@@ -6,14 +6,15 @@ import Topbar from "./components/Topbar";
 import TodoList from "./components/TodoList";
 import Button from "react-bootstrap/Button";
 import AddTodo from "./components/AddTodo";
+import DisplayTodo from "./components/DisplayTodo";
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Listen music", date: "March 27, 11:52 PM" },
-    { id: 2, text: "Read a book", date: "March 28, 09:00 AM" },
-    { id: 2, text: "Read 2 book", date: "March 28, 02:00 AM" },
-    { id: 3, text: "Walk 1km", date: "March 29, 03:30 PM" },
-    { id: 3, text: "Walk 5km", date: "March 29, 04:30 PM" },
+    { id: 1, text: "Listen music", date: new Date().toLocaleString() },
+    { id: 2, text: "Read a book", date: new Date().toLocaleString() },
+    { id: 3, text: "Read 2 book", date: new Date().toLocaleString() },
+    { id: 4, text: "Walk 1km", date: new Date().toLocaleString() },
+    { id: 5, text: "Walk 5km", date: new Date().toLocaleString() },
   ]);
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -41,11 +42,7 @@ function App() {
       <Topbar />
       <div className="search-add d-flex align-items-center justify-content-center">
         <SearchTodo onSearch={setSearchQuery} />
-        <Button
-          variant="primary"
-          className="addTodoBtn ms-2"
-          onClick={handleShowAddModal}
-        >
+        <Button className="addTodoBtn ms-2" onClick={handleShowAddModal}>
           Add Todo
         </Button>
         <AddTodo
@@ -54,7 +51,7 @@ function App() {
           handleAddTodo={handleAddTodo}
         />
       </div>
-      <TodoList searchQuery={searchQuery} />
+      <TodoList searchQuery={searchQuery} todos={todos} />
     </div>
   );
 }
