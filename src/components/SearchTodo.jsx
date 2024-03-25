@@ -1,10 +1,22 @@
-import React from "react";
+// SearchTodo.jsx
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import "../css/SearchTodo.css";
 
-function SearchTodo() {
+function SearchTodo({ onSearch }) {
+  const [searchText, setSearchText] = useState("");
+
+  const handleSearch = () => {
+    onSearch(searchText);
+  };
+
+  const handleChange = (e) => {
+    setSearchText(e.target.value);
+    onSearch(e.target.value); // Call onSearch for every keystroke
+  };
+
   return (
     <>
       <div className="searchtodo my-5 p-2 d-flex justify-content-center align-items-center">
@@ -14,10 +26,12 @@ function SearchTodo() {
             aria-label="Default"
             aria-describedby="inputGroup-sizing-default"
             placeholder="Search todo from your list..."
+            value={searchText}
+            onChange={handleChange}
           />
         </InputGroup>
         <Button variant="primary" className="addTodoBtn ms-2">
-          Add ToDo
+          Add Todo
         </Button>
       </div>
     </>

@@ -1,6 +1,6 @@
 .searchbar {
-  width: 700px !important;
-  height: 40px;
+  width: 900px !important;
+  height: 60px;
 }
 .dark-input {
   background-color: #393838be; /* Set the background color to dark */
@@ -8,7 +8,7 @@
   border: none; /* Remove border */
   box-shadow: none; /* Remove box shadow */
   transition-duration: 0.4s;
-  font-size: 12px;
+  font-size: 16px;
 }
 .dark-input:hover {
   background-color: #393939;
@@ -24,11 +24,11 @@
 }
 
 .addTodoBtn {
-  height: 40px;
-  background-color: #393838be;
+  height: 60px;
+  background-color: #959292be;
   border: none;
-  font-size: 12px;
-  color: #7a7979;
+  font-size: 16px;
+  color: #f7f2f2;
 }
 .addTodoBtn:hover {
   background-color: #7b7b7b;

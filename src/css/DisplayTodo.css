@@ -1,0 +1,36 @@
+.todo-item {
+  max-width: 700px !important;
+  min-width: 400px;
+  height: auto;
+  background-color: #393838be;
+  border-radius: 5px 0px 0px 5px;
+  color: #e0dede;
+}
+.todo-time {
+  font-size: 12px;
+  color: #8b8989be;
+  font-style: italic;
+  background-color: #393838be;
+  height: 40px;
+  width: auto;
+  border-radius: 0px 5px 5px 0px;
+
+  /* font-weight: bold; */
+}
+
+.editTodoBtn {
+  height: 40px;
+  background-color: #393838be;
+  border: none;
+  font-size: 12px;
+  color: #7a7979;
+}
+.editTodoBtn:hover {
+  background-color: #7b7b7b;
+  color: #afadad;
+  transition: 0.5s ease;
+}
+
+.editTodoBtn:active {
+  background-color: #7b7b7b !important;
+}
