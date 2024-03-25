@@ -2,15 +2,10 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import Button from "react-bootstrap/Button";
 import "../css/SearchTodo.css";
 
 function SearchTodo({ onSearch }) {
   const [searchText, setSearchText] = useState("");
-
-  const handleSearch = () => {
-    onSearch(searchText);
-  };
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
@@ -30,9 +25,6 @@ function SearchTodo({ onSearch }) {
             onChange={handleChange}
           />
         </InputGroup>
-        <Button variant="primary" className="addTodoBtn ms-2">
-          Add Todo
-        </Button>
       </div>
     </>
   );

@@ -1,0 +1,80 @@
+.addtodo-modal {
+  background-color: #292a2a85;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.modal-content {
+  background-color: #262626;
+  height: 200px;
+  width: 500px;
+}
+
+.modal-title {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.dark-input-addtodo {
+  background-color: #393838be; /* Set the background color to dark */
+  color: white !important; /* Set text color to white */
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove box shadow */
+  transition-duration: 0.4s;
+  font-size: 16px;
+}
+.dark-input-addtodo:hover {
+  background-color: #393939;
+  transition: 0.5s ease;
+}
+.dark-input-addtodo:focus {
+  box-shadow: none; /* Remove box shadow on focus */
+  background-color: #525252be;
+  transition: 0.3s ease;
+}
+.dark-input-addtodo::placeholder {
+  color: #7a7979; /* Set placeholder text color to white */
+  font-size: 13px;
+}
+
+.modal-header .btn-close {
+  color: white !important;
+  background-color: #cbc9c9;
+  font-size: 12px !important;
+  transition-duration: 0.4s;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none; /* Remove box shadow on focus */
+}
+
+.modal-header .btn-close:hover {
+  background-color: #e0dede;
+}
+
+.modalClosebtn {
+  background-color: #262626;
+  border: 1px solid #a8a7a7;
+}
+.modalAddBtn {
+  background-color: #262626;
+  border: 1px solid #a8a7a7 !important;
+}
+
+.modalAddBtn:hover {
+  background-color: #68166f !important;
+}
+
+.modalAddBtn:active,
+.modalAddBtn:focus {
+  background-color: #4d1152 !important;
+}
+
+.modalClosebtn:hover {
+  background-color: #242324 !important;
+}
+
+.modalClosebtn:active,
+.modalClosebtn:focus {
+  background-color: #131313 !important;
+}
