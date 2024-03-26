@@ -1,4 +1,3 @@
-// DisplayTodo.jsx
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import EditTodoModal from "../components/EditTodo";
@@ -25,6 +24,7 @@ function DisplayTodo({ todo, handleUpdateTodo, handleDeleteTodo }) {
   const handleShowDeleteModal = () => {
     setShowDeleteModal(true);
   };
+
   const handleMarkComplete = () => {
     setCompleted(true);
   };
@@ -36,12 +36,12 @@ function DisplayTodo({ todo, handleUpdateTodo, handleDeleteTodo }) {
         className="d-flex justify-content-center align-items-center mb-2"
       >
         <div
-          className={`  d-flex justify-content-between align-items-center ${
+          className={`d-flex justify-content-between align-items-center ${
             completed ? "completed" : "todo-data"
           }`}
         >
-          <div className="d-flex justify-content-between align-items-center p-2 ">
-            <p className="m-0 p-0">{todo.text}</p>
+          <div className=" d-flex justify-content-between align-items-center p-2">
+            <p className="m-0 p-0 todo-text">{todo.text}</p>
           </div>
           <div className="todo-time d-flex justify-content-center align-items-center p-2">
             <p className="m-0 p-0">{todo.date}</p>
