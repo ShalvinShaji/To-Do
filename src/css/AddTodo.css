@@ -7,7 +7,7 @@
 
 .modal-content {
   background-color: #262626;
-  height: 200px;
+  height: 300px;
   width: 500px;
 }
 
@@ -16,7 +16,8 @@
   font-style: italic;
 }
 
-.dark-input-addtodo {
+.dark-input-addtodo,
+.edit-todo {
   background-color: #393838be; /* Set the background color to dark */
   color: white !important; /* Set text color to white */
   border: none; /* Remove border */
@@ -24,16 +25,19 @@
   transition-duration: 0.4s;
   font-size: 16px;
 }
-.dark-input-addtodo:hover {
+.dark-input-addtodo:hover,
+.edit-todo:hover {
   background-color: #393939;
   transition: 0.5s ease;
 }
-.dark-input-addtodo:focus {
+.dark-input-addtodo:focus,
+.edit-todo:focus {
   box-shadow: none; /* Remove box shadow on focus */
   background-color: #525252be;
   transition: 0.3s ease;
 }
-.dark-input-addtodo::placeholder {
+.dark-input-addtodo::placeholder,
+.edit-todo::placeholder {
   color: #7a7979; /* Set placeholder text color to white */
   font-size: 13px;
 }
@@ -57,7 +61,7 @@
   border: 1px solid #a8a7a7;
 }
 .modalAddBtn {
-  background-color: #262626;
+  background-color: #262626 !important;
   border: 1px solid #a8a7a7 !important;
 }
 

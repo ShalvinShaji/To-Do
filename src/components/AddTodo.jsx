@@ -12,6 +12,7 @@ function AddTodo({ show, handleClose, handleAddTodo }) {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && todoText.trim() !== "") {
+      e.preventDefault();
       handleAdd();
     }
   };

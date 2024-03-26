@@ -6,15 +6,14 @@ import Topbar from "./components/Topbar";
 import TodoList from "./components/TodoList";
 import Button from "react-bootstrap/Button";
 import AddTodo from "./components/AddTodo";
-import DisplayTodo from "./components/DisplayTodo";
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Listen music", date: new Date().toLocaleString() },
+    { id: 1, text: "Listen a person", date: new Date().toLocaleString() },
     { id: 2, text: "Read a book", date: new Date().toLocaleString() },
-    { id: 3, text: "Read 2 book", date: new Date().toLocaleString() },
+    { id: 3, text: "Climb a book", date: new Date().toLocaleString() },
     { id: 4, text: "Walk 1km", date: new Date().toLocaleString() },
-    { id: 5, text: "Walk 5km", date: new Date().toLocaleString() },
+    { id: 5, text: "Ride a bicycle", date: new Date().toLocaleString() },
   ]);
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -29,12 +28,23 @@ function App() {
   };
 
   const handleAddTodo = (text) => {
+    if (!text) {
+      return; // If text is null or empty, do not add a new todo
+    }
+
     const newTodo = {
       id: todos.length + 1,
       text: text,
       date: new Date().toLocaleString(),
     };
     setTodos([...todos, newTodo]);
+  };
+
+  const handleUpdateTodo = (updatedTodo) => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === updatedTodo.id ? updatedTodo : todo
+    );
+    setTodos(updatedTodos);
   };
 
   return (
@@ -51,7 +61,12 @@ function App() {
           handleAddTodo={handleAddTodo}
         />
       </div>
-      <TodoList searchQuery={searchQuery} todos={todos} />
+
+      <TodoList
+        searchQuery={searchQuery}
+        todos={todos}
+        handleUpdateTodo={handleUpdateTodo}
+      />
     </div>
   );
 }
