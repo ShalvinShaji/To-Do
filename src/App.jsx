@@ -9,11 +9,11 @@ import AddTodo from "./components/AddTodo";
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Listen a person", date: new Date().toLocaleString() },
-    { id: 2, text: "Read a book", date: new Date().toLocaleString() },
-    { id: 3, text: "Climb a book", date: new Date().toLocaleString() },
-    { id: 4, text: "Walk 1km", date: new Date().toLocaleString() },
-    { id: 5, text: "Ride a bicycle", date: new Date().toLocaleString() },
+    { id: 1, text: "Listen a person", date: "03/27/2024, 02:46:39 AM" },
+    { id: 2, text: "Read a book", date: "08/11/2022, 09:32:39 PM" },
+    { id: 3, text: "Climb a book", date: "02/12/2020, 02:40:39 AM" },
+    { id: 4, text: "Walk 1km", date: "09/11/2020, 03:21:39 PM" },
+    { id: 5, text: "Ride a bicycle", date: "01/01/2019, 05:51:39 AM" },
   ]);
 
   const [searchQuery, setSearchQuery] = useState("");
