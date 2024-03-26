@@ -39,8 +39,9 @@ function EditTodoModal({ show, handleClose, todo, handleUpdateTodo }) {
           value={updatedTodo.text}
           onChange={handleChange}
           onKeyPress={handleKeyPress}
+          autoFocus
         />
-        <Form.Control
+        {/* <Form.Control
           type="text"
           className="edit-todo"
           placeholder="Enter updated todo date"
@@ -48,7 +49,7 @@ function EditTodoModal({ show, handleClose, todo, handleUpdateTodo }) {
           value={updatedTodo.date}
           onChange={handleChange}
           onKeyPress={handleKeyPress}
-        />
+        /> */}
       </Modal.Body>
       <Modal.Footer>
         <Button className="modalClosebtn" onClick={handleClose}>

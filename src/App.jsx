@@ -29,7 +29,7 @@ function App() {
 
   const handleAddTodo = (text) => {
     if (!text) {
-      return; // If text is null or empty, do not add a new todo
+      return;
     }
 
     const newTodo = {
@@ -45,6 +45,10 @@ function App() {
       todo.id === updatedTodo.id ? updatedTodo : todo
     );
     setTodos(updatedTodos);
+  };
+
+  const handleDeleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   return (
@@ -66,6 +70,7 @@ function App() {
         searchQuery={searchQuery}
         todos={todos}
         handleUpdateTodo={handleUpdateTodo}
+        handleDeleteTodo={handleDeleteTodo}
       />
     </div>
   );

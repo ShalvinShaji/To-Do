@@ -37,6 +37,7 @@ function AddTodo({ show, handleClose, handleAddTodo }) {
           value={todoText}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
+          autoFocus
         />
       </Modal.Body>
       <Modal.Footer>

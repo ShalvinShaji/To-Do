@@ -1,11 +1,13 @@
 // DisplayTodo.jsx
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import EditTodoModal from "../components/EditTodo";
+import DeleteTodoModal from "../components/DeleteTodo";
 import "../css/DisplayTodo.css";
 
-function DisplayTodo({ todo, handleUpdateTodo }) {
+function DisplayTodo({ todo, handleUpdateTodo, handleDeleteTodo }) {
   const [showEditModal, setShowEditModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   const handleCloseEditModal = () => {
     setShowEditModal(false);
@@ -13,6 +15,14 @@ function DisplayTodo({ todo, handleUpdateTodo }) {
 
   const handleShowEditModal = () => {
     setShowEditModal(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setShowDeleteModal(false);
+  };
+
+  const handleShowDeleteModal = () => {
+    setShowDeleteModal(true);
   };
 
   return (
@@ -30,6 +40,9 @@ function DisplayTodo({ todo, handleUpdateTodo }) {
         <Button className="editTodoBtn ms-2" onClick={handleShowEditModal}>
           <p className="p-0 m-0">Edit Todo</p>
         </Button>
+        <Button className="editTodoBtn ms-2" onClick={handleShowDeleteModal}>
+          <p className="p-0 m-0">Delete Todo</p>
+        </Button>
         {/* Add Delete Todo and Mark Completed buttons here */}
       </div>
       <EditTodoModal
@@ -37,6 +50,12 @@ function DisplayTodo({ todo, handleUpdateTodo }) {
         handleClose={handleCloseEditModal}
         todo={todo}
         handleUpdateTodo={handleUpdateTodo}
+      />
+      <DeleteTodoModal
+        show={showDeleteModal}
+        handleClose={handleCloseDeleteModal}
+        todo={todo}
+        handleDeleteTodo={handleDeleteTodo}
       />
     </>
   );

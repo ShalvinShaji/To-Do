@@ -2,7 +2,7 @@
 import { React, useEffect } from "react";
 import DisplayTodo from "./DisplayTodo";
 
-function TodoList({ searchQuery, todos, handleUpdateTodo }) {
+function TodoList({ searchQuery, todos, handleUpdateTodo, handleDeleteTodo }) {
   const filteredTodos = searchQuery
     ? todos.filter((todo) =>
         todo.text.toLowerCase().includes(searchQuery.toLowerCase())
@@ -17,6 +17,7 @@ function TodoList({ searchQuery, todos, handleUpdateTodo }) {
             key={todo.id}
             todo={todo}
             handleUpdateTodo={handleUpdateTodo}
+            handleDeleteTodo={handleDeleteTodo}
           />
         ))
       ) : (
