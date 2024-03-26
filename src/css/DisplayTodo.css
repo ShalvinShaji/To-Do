@@ -4,7 +4,7 @@
   height: auto;
   background-color: #393838be;
   border-radius: 5px 5px 5px 5px;
-  color: #a5a3a3;
+  color: #a5a3a3 !important;
 }
 .completed {
   max-width: 700px !important;
